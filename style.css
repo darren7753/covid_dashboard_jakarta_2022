@@ -1,0 +1,11 @@
+div[data-testid = "stHorizontalBlock"] > div:first-of-type {
+    background-color: #252e3f;
+}
+
+div[data-testid="stHorizontalBlock"] > div:nth-of-type(2) {
+    background-color: #252e3f;
+}
+
+div.stColumn{
+    padding: 20px;
+}
