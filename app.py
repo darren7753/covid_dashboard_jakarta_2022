@@ -119,21 +119,24 @@ with col3:
         y=df.set_index("date").resample(time_resample).sum()[["positif","sembuh","meninggal"]].positif,
         mode="lines",
         line_color="#fa6b84",
-        name="Infected"
+        name="Infected",
+        line=dict(width=3)
     ))
     fig.add_trace(go.Scatter(
         x=df.set_index("date").resample(time_resample).sum()[["positif","sembuh","meninggal"]].index,
         y=df.set_index("date").resample(time_resample).sum()[["positif","sembuh","meninggal"]].sembuh,
         mode="lines",
         line_color="#90EF90",
-        name="Recovered"
+        name="Recovered",
+        line=dict(width=3)
     ))
     fig.add_trace(go.Scatter(
         x=df.set_index("date").resample(time_resample).sum()[["positif","sembuh","meninggal"]].index,
         y=df.set_index("date").resample(time_resample).sum()[["positif","sembuh","meninggal"]].meninggal,
         mode="lines",
         line_color="black",
-        name="Deaths"
+        name="Deaths",
+        line=dict(width=3)
     ))
     fig.update_layout(
         xaxis=dict(
